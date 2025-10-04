@@ -1,0 +1,63 @@
+.calc {
+  overflow: hidden;
+
+  &W {
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 0 20px 0 rgba(0, 24, 49, 0.07);
+    backdrop-filter: blur(5px);
+    padding: 70px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &Image {
+    position: absolute;
+    right: -450px;
+    top: -70px;
+    width: 900px;
+  }
+
+  .socials {
+    input {
+      display: none;
+
+      &:checked {
+        &+label {
+          position: relative;
+
+          &::before {
+            content: '';
+            border: 2px solid #018D48;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+
+    label {
+      height: 60px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-radius: 50px;
+      border: 1px solid #F0F0F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color .2s linear;
+      &:hover {
+        border-color: #018D48;
+      }
+    }
+  }
+}

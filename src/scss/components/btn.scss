@@ -1,0 +1,77 @@
+// btn
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: background-color .2s linear, color .2s linear;
+  column-gap: 10px;
+  height: 55px;
+  padding-left: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 18px;
+
+  &--lg {
+    height: 65px;
+
+    @media(max-width: 991px) {
+      height: 50px;
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    stroke: #000;
+  }
+  &--green {
+    background-color: #018D48;
+    color: #fff;
+    &:hover {
+      background-color: #000;
+    }
+  }
+  &--green-transparent {
+    border: 2px solid #018D48;
+    &:hover {
+      background-color: #018D48;
+      color: #fff;
+    }
+  }
+  &.w-100 {
+    width: 100%;
+  }
+}
+.introSlideBtn {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.introSlidePlay {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.servicesSlideArrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #018D48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.calcFormBtn {
+  height: 65px;
+  font-weight: 500;
+}

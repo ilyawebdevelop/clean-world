@@ -1,0 +1,99 @@
+// Footer
+.footer {
+  background: url('@img/footer/footer-bg.jpg') no-repeat center center / cover;
+
+  &T {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  &B {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background: rgba(220, 232, 245, 0.50);
+
+    a {
+      font-size: 14px;
+      opacity: .7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &Logo {
+    &:hover {
+      opacity: .8;
+    }
+    img {
+      width: 250px;
+    }
+  }
+
+  &Phone {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &TW {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Mail {
+    &:hover {
+      color: #018D48;
+    }
+  }
+
+  &Nav {
+    max-width: 200px;
+
+    &Title {
+      color: #000;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 15px;
+
+        a {
+          &:hover {
+            color: #018D48;
+          }
+        }
+      }
+    }
+  }
+
+  &Contacts {
+    width: 260px;
+  }
+
+  .copyright {
+    opacity: .7;
+    font-size: 14px;
+  }
+
+  .develop {
+    font-size: 14px;
+
+    span {
+      opacity: .7;
+    }
+
+    a {
+      opacity: 1;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

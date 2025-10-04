@@ -1,0 +1,72 @@
+// Header
+.header {
+  background: #FFF;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.10);
+
+  &T {
+    border-bottom: 1px solid #F5F5F5;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  &B {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &Socials {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #F5F5F5;
+    border-left: 1px solid #F5F5F5;    
+    height: fit-content;
+  }
+  &Phone {
+    &:hover {
+      color: #018D48;
+    }
+  }
+  &Logo {
+    &:hover {
+      opacity: .85;
+    }
+    img {
+      width: 170px;
+    }
+  }
+  &Contacts {
+    padding-right: 30px;
+    max-width: 267px;
+    text-align: end;
+  }
+  &Phone {
+    text-align: end;
+    margin-bottom: 10px;
+    &W {
+      padding-left: 30px;
+    }
+  }
+  &Nav {
+    &>ul {
+      display: flex;
+      column-gap: 50px;
+      &>li {
+        &.has-menu-children {
+          &>a {
+            padding-right: 18px;
+            background: url('@img/icons/arrow-down.svg') no-repeat right center / 8px;
+          }
+        }
+        &>a {
+          font-size: 18px;
+          &:hover {
+            color: #018D48;
+          }
+        }
+      }
+    }
+    .sub-menu {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.intro {
+  background-color: #EDF6FF;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  &Slider {
+    overflow: visible;
+  }
+
+  &Slide {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    height: auto;
+
+    &Content {
+      grid-column: 6 span;
+      padding-top: 100px;
+      padding-bottom: 170px;
+    }
+
+    &Descr {
+      font-size: 18px;
+      line-height: 140%;
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    &Img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        width: 100%;
+        margin-left: auto;
+        object-fit: contain;
+        height: 100%;
+        min-width: 860px;
+        position: relative;
+      }
+
+      &W {
+        grid-column: 6 span;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &Title {
+      margin-bottom: 40px;
+
+      span {
+        color: #018D48;
+      }
+    }
+
+    &Action {
+      display: flex;
+      column-gap: 30px;
+    }
+  }
+
+  .navArrow {
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .2s linear;
+
+    &:hover {
+      background-color: #D6E7F8;
+    }
+
+   
+    position: relative;
+    z-index: 2;
+  }
+
+  &Nav {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 50px;
+
+  }
+
+  .swiper-pagination {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 0;
+    bottom: unset;
+
+    &-bullet {
+      opacity: 1;
+      background-color: #fff;
+
+      &:hover {
+        background-color: #ABCFF4;
+      }
+
+      &-active {
+        background-color: #ABCFF4;
+      }
+    }
+  }
+}
+
+.introArrowW {
+  column-gap: 20px;
+}
