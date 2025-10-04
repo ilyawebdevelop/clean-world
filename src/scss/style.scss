@@ -1,6 +1,9 @@
 // стили для свайпера
 @import "../../node_modules/swiper/swiper-bundle.min";
 
+// fancybox
+@import './fancybox';
+
 // Базовые подключения
 @import 'vars';
 @import 'mixins';
@@ -20,6 +23,9 @@
 @import "./components/adv";
 @import "./components/services";
 @import "./components/calc";
+@import "./components/about";
+@import "./components/why";
+@import "./components/present";
 
 
 
