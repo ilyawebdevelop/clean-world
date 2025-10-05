@@ -1,4 +1,37 @@
 .present {
-  padding-top: 100px;
-  padding-bottom: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	.tag {
+		color: #fff;
+		font-weight: 300;
+	}
+	&W {
+		background-color: #018D48;
+		border-radius: 16px;
+		background: #018D48;
+	}
+	&Content {
+		padding: 59px;
+	}
+	&Descr {
+		color: #fff;
+		margin-bottom: 40px;
+		font-size: 26px;
+		line-height: normal;
+	}
+	&Img {
+		border-radius: 0 14px 14px 0;
+		position: relative;
+		right: -2px;
+		&W {
+			position: relative;
+			height: 100%;
+		}
+	}
+	&Logo {
+		position: absolute;
+		right: 40px;
+		top: 40px;
+		z-index: 1;
+	}
 }

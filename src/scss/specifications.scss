@@ -357,6 +357,8 @@ h3,
   border: 1px solid #E7E7E7;
   width: fit-content;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .agreement {
   input {

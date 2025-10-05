@@ -2635,6 +2635,8 @@ h3,
   border: 1px solid #E7E7E7;
   width: fit-content;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .agreement input {
@@ -2763,6 +2765,11 @@ h3,
   height: 65px;
   padding-left: 35px;
   padding-right: 35px;
+}
+
+.presentFile {
+  color: #000;
+  background-color: #fff;
 }
 
 /* Hamburger Menu */
@@ -3264,6 +3271,114 @@ h3,
 .present {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+.present .tag {
+  color: #fff;
+  font-weight: 300;
+}
+.presentW {
+  background-color: #018D48;
+  border-radius: 16px;
+  background: #018D48;
+}
+.presentContent {
+  padding: 59px;
+}
+.presentDescr {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 26px;
+  line-height: normal;
+}
+.presentImg {
+  border-radius: 0 14px 14px 0;
+  position: relative;
+  right: -2px;
+}
+.presentImgW {
+  position: relative;
+  height: 100%;
+}
+.presentLogo {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  z-index: 1;
+}
+
+.technic {
+  background-color: #EDF6FF;
+}
+.technicHead {
+  display: flex;
+  align-items: center;
+  column-gap: 150px;
+  margin-bottom: 50px;
+}
+.technic .navArrow {
+  background-color: #fff;
+}
+.technic .navArrow:hover {
+  background-color: #E2F1EA;
+}
+.technic .navArrowW {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  column-gap: 20px;
+}
+.technicSlider {
+  overflow: visible;
+}
+.technicSlide:hover .technicSlideTitle {
+  color: #018D48;
+}
+.technicSlide:hover .technicSlideImg {
+  opacity: 0.8;
+}
+.technicSlideImg {
+  background-color: #fff;
+  height: 420px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: opacity 0.2s linear;
+}
+.technicSlideTitle {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.2s linear;
+}
+
+.partners {
+  background: url("../img/why/why-bg.jpg") no-repeat center center/cover;
+}
+.partners .tag {
+  white-space: nowrap;
+}
+.partners .sectHead {
+  display: flex;
+  column-gap: 160px;
+}
+.partnersSlider {
+  overflow: visible;
+}
+.partnersSlide {
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.partnersSlide img {
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews .sectHead {
+  display: flex;
+  column-gap: 235px;
 }
 
 .footer {

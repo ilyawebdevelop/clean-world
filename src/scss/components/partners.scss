@@ -1,0 +1,23 @@
+.partners {
+  background: url('@img/why/why-bg.jpg') no-repeat center center / cover;
+  .tag {
+    white-space: nowrap;
+  }
+  .sectHead {
+    display: flex;
+    column-gap: 160px;
+  }
+  &Slider {
+    overflow: visible;
+  }
+  &Slide {
+    width: fit-content;
+    background-color: #fff;
+    border-radius: 16px;
+    img {
+      object-fit: contain;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

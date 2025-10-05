@@ -14,7 +14,7 @@ Fancybox.bind("[data-fancybox]", {
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar]);
 
-// Инициализация слайдера product-slider
+// Инициализация слайдера introSlider
 const introSlider = document.querySelector('.introSlider');
 var mySwiperIntroSlider = new Swiper(introSlider, {
 	slidesPerView: 1,
@@ -89,4 +89,55 @@ var mySwiperWhy = new Swiper(whySlider, {
 			slidesPerView: 3,
 		},
 	},
+});
+
+// Инициализация слайдера technicSlider
+const technicSlider = document.querySelector('.technicSlider');
+var mySwiperTechnic = new Swiper(technicSlider, {
+	slidesPerView: 3,
+	speed: 800,
+	spaceBetween: 20,
+	autoplay: {
+		delay: 3000,
+	},
+	navigation: {
+		prevEl: technicSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
+		nextEl: technicSlider?.closest('.sliderW').querySelector('.navArrowNext'),
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		1400: {
+			slidesPerView: 3,
+		},
+	},
+});
+
+// Инициализация слайдера partnersSlider
+const partnersSlider = document.querySelector('.partnersSlider');
+var mySwiperPartners = new Swiper(partnersSlider, {
+  slidesPerView: 'auto',
+  speed: 800,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    992: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 'auto',
+    },
+  },
 });
