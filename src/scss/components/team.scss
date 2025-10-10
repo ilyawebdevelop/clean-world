@@ -1,0 +1,29 @@
+.team {
+  background: url('@img/why/why-bg.jpg') no-repeat center center / cover;
+  .sectHead {
+    display: flex;
+    column-gap: 165px;
+    margin-bottom: 50px;
+  }
+  &Slider {
+    overflow: visible;
+  }
+  &Slide {
+    &Img {
+      width: 100%;
+      height: 445px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    &Title {
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    &Work {
+      color: #909090;
+      font-size: 18px;
+      line-height: 140%;
+    }
+  }
+}

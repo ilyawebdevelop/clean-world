@@ -1,0 +1,57 @@
+.map {
+
+  .sectHead {
+    display: flex;
+    column-gap: 220px;
+    margin-bottom: 50px;
+  }
+
+  .tag {
+    font-weight: 300;
+  }
+
+  iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+  }
+
+  &W {
+    position: relative;
+  }
+
+  .mapContent {
+    padding: 50px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 360px;
+    z-index: 1;
+    &::before {
+      content: '';
+      width: 162px;
+      height: 174px;
+      background: url('@img/map/photoroom.png') no-repeat center center / contain;
+      position: absolute;
+      bottom: -50px;
+      right: -60px;
+    }
+  }
+  &Phone {
+    font-size: 22px;
+    line-height: normal;
+    font-weight: 500;
+    &:hover {
+      color: #018D48;
+    }
+  }
+  &Mail {
+    &:hover {
+      color: #018D48;
+    }
+  }
+}

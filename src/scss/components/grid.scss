@@ -20,9 +20,37 @@
     &>.col {
       grid-column: 4 span;
     }
+    &.grid-column-sm-2 {
+      &>.col {
+        @media(max-width: 575px){
+          grid-column: 6 span;
+        }
+      }
+    }
   }
 
   &.grid-column-2 {
+    &.grid-column-xl-1 {
+      &>.col {
+        @media(max-width: 1199px){
+          grid-column: 12 span;
+        }        
+      }
+    }
+    &.grid-column-lg-1 {
+      &>.col {
+        @media(max-width: 991px){
+          grid-column: 12 span;
+        }        
+      }
+    }
+    &.grid-column-md-1 {
+      &>.col {
+        @media(max-width: 767px){
+          grid-column: 12 span;
+        }        
+      }
+    }
     &>.col {
       grid-column: 6 span;
     }
@@ -55,6 +83,11 @@
 
 .gap-3 {
   gap: 16px;
+  &.gap-xl-0 {
+    @media(min-width: 1199px){
+      gap: 0;
+    }
+  }
 }
 
 .gap-4 {
@@ -67,10 +100,25 @@
 
 .gap-5 {
   gap: 50px;
+  &.gap-xl-2 {
+    @media(max-width: 1199px){
+      gap: 20px;
+    }
+  }
 }
 
 .gap-70 {
   gap: 70px;
+  &.gap-xxl-40 {
+    @media(max-width: 1400px){
+      gap: 40px;
+    }
+  }
+  &.gap-lg-20 {
+    @media(max-width: 991px){
+     gap: 20px; 
+    }
+  }
 }
 
 .py-3 {
@@ -84,6 +132,21 @@
 
 .justify-content-center {
   justify-content: center;
+  &.justify-content-sm-start {
+    @media(min-width: 575px){
+      justify-content: flex-start;
+    }
+  }
+  &.justify-content-lg-start {
+    @media(min-width: 991px){
+      justify-content: flex-start;
+    }
+  }
+  &.justify-content-xl-start {
+    @media(min-width: 1199px){
+      justify-content: flex-start;
+    }
+  }
 }
 
 .justify-content-end {
@@ -124,13 +187,33 @@
 
 .mb-30 {
   margin-bottom: 30px;
+  &.mb-sm-20 {
+    @media(max-width: 575px){
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .mb-40 {
   margin-bottom: 40px;
+  &.mb-lg-20 {
+    @media(max-width: 991px){
+      margin-bottom: 20px;
+    }
+  }
+  &.mb-xxl-20 {
+    @media(max-width: 1400px){
+      margin-bottom: 20px;
+    }
+  }
 }
 .mb-50 {
   margin-bottom: 50px;
+  &.mb-md-30 {
+    @media(max-width: 767px){
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .mt-15 {
@@ -148,4 +231,17 @@
 
 .mt-35 {
   margin-top: 35px;
+}
+.flex-column {
+  flex-direction: column;
+  &.flex-xl-row {
+    @media(min-width: 1199px){
+      flex-direction: row;
+    }
+  }
+  &.flex-sm-row {
+    @media(min-width: 575px){
+      flex-direction: row;
+    }
+  }
 }

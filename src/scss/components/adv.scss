@@ -1,12 +1,26 @@
 .adv {
   padding-top: 50px;
   padding-bottom: 50px;
+  @media(max-width: 991px){
+    padding-bottom: 35px;
+    padding-top: 35px;
+  }
   &W {
     display: flex;
     justify-content: space-between;
     column-gap: 50px;
+    @media(max-width: 991px){
+      column-gap: 35px;
+    }
+    @media(max-width: 767px){
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
   }
   &Item {
+    @media(max-width: 575px){
+      width: 43%;
+    }
     &Count {
       color: #018D48;
       text-align: center;
@@ -14,12 +28,22 @@
       font-weight: 700;
       line-height: normal;      
       margin-bottom: 20px;
+      @media(max-width: 1400px){
+        font-size: 60px;
+      }
+      @media(max-width: 575px){
+        font-size: 45px;
+        margin-bottom: 13px;
+      }
     }
     &Text {
       max-width: 240px;
       font-size: 18px;
       line-height: normal;
       text-align: center;
+      @media(max-width: 991px){
+        font-size: 16px;
+      }
     }
   }
 }

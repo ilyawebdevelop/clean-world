@@ -1,8 +1,17 @@
 .why {
   background: url('@img/why/why-bg.jpg') no-repeat center center / cover;
+  &--transparent {
+    background: transparent;
+  }
 
   .sectHead {
     margin-bottom: 95px;
+    @media(max-width: 991px){
+      margin-bottom: 60px;
+    }
+    @media(max-width: 575px){
+      margin-bottom: 50px;
+    }
   }
 
   &Head {
@@ -13,6 +22,10 @@
     &L {
       display: flex;
       column-gap: 150px;
+      @media(max-width: 991px){
+        flex-direction: column;
+        row-gap: 20px;
+      }
     }
   }
 
@@ -27,6 +40,7 @@
     padding-right: 30px;
     border-radius: 16px;
     background: #EDF6FF;
+    height: auto;
 
     &Icon {
       width: 90px;
@@ -51,6 +65,9 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 140%;
+      @media(max-width: 575px){
+        font-size: 16px;
+      }
     }
   }
 

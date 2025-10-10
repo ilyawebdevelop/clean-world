@@ -3,16 +3,16 @@
   align-self: center;
   flex-direction: column;
   justify-content: space-between;
-  width: 18px;
-  height: 14px;
-  min-width: 15px;
+  width: 32px;
+  height: 18px;
+  min-width: 32px;
   margin-right: 0;
   cursor: pointer;
   position: relative;
   // transition: background 0.2s linear;  
   display: none;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     display: flex;
   }
 }

@@ -2,16 +2,21 @@
 <header class="header" id="header">
   <div class="container">
     <div class="headerT d-flex align-items-center justify-content-between">
+      <div class="hamburger" id="toggle">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+      </div><!-- /Hamburger Menu -->
       <a href="#" class="headerLogo">
         <img src="@img/admin/logo/logo.svg" alt="image">
       </a>
       <div class="headerW d-flex align-items-center">
-        <div class="headerContacts">
+        <div class="headerContacts headerContacts--lg">
           Казань, ул. Амирхана Еники 17,
           БЦ Лагуна , офис 103
         </div>
         <div class="headerSocials socials">
-          <ul class="d-flex gap-3">
+          <ul class="d-flex gap-3 align-items-center">
             <li>
               <a href="#" target="_blank" rel="nofollow">
                 <img src="@img/admin/socials/icon-1.svg" alt="icon">
@@ -20,6 +25,11 @@
             <li>
               <a href="#" target="_blank" rel="nofollow">
                 <img src="@img/admin/socials/icon-2.svg" alt="icon">
+              </a>
+            </li>
+            <li class="phone-sm">
+              <a href="tel:+78432166866" target="_blank" rel="nofollow">
+                <img src="@img/icons/phone-green.svg" alt="icon">
               </a>
             </li>
           </ul>
@@ -31,39 +41,98 @@
       </div>
     </div>
     <div class="headerB d-flex justify-content-between align-items-center">
+      <div class="mob-menu-overlay"></div>
       <div class="headerNav">
+        <div class="headerNavCloseBtn" bis_skin_checked="1">
+          <img src="@img/icons/close.svg" alt="close">
+        </div>
+        <a href="#" class="headerLogo logo">
+          <img src="@img/admin/logo/logo.svg" alt="image">
+        </a>
         <ul>
           <li class="has-menu-children">
-            <a href="#">Наши услуги</a>
-            <ul class="sub-menu">
-              <li>
+            <a id="headerServicesMenuBtn" href="#">Наши услуги</a>
+            <ul class="sub-menu" id="services-submenu-nav">
+              <li class="has-menu-children">
                 <a href="#">
+                  <img src="@img/admin/menu/icon-1.png" alt="icon">
                   Вывоз и утилизация мусора
                 </a>
-                <ul class="sub-menu">
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                </ul>
+                <div class="submenuW">
+                  <ul class="submenu">
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                  </ul>
+                </div>
+
               </li>
-              <li><a href="#">Аренда спецтехники</a></li>
-              <li>
-                <a href="#">Доставка инертных материалов</a>
-                <ul class="sub-menu">
-                  <li><a href="#">Название услуги</a></li>                 
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                  <li><a href="#">Название услуги</a></li>
-                </ul>
+              <li class="has-menu-children">
+                <a href="#">
+                  <img src="@img/admin/menu/icon-2.png" alt="icon">
+                  Аренда спецтехники
+                </a>
               </li>
-              <li><a href="#">Благоустройство</a></li>
-              <li><a href="#">Экология</a></li>
-              <li><a href="#">Вывоз и утилизация снега</a></li>
-              <li><a href="#">Другие направления</a></li>
+              <li class="has-menu-children">
+                <a href="#">
+                  <img src="@img/admin/menu/icon-3.png" alt="icon">
+                  Доставка инертных материалов
+                </a>
+                <div class="submenuW">
+                  <ul class="submenu">
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                  </ul>
+                </div>
+
+              </li>
+              <li class="has-menu-children">
+                <a href="#">
+                  <img src="@img/admin/menu/icon-3.png" alt="icon">
+                  Благоустройство
+                </a>
+              </li>
+              <li class="has-menu-children"><a href="#">Экология</a></li>
+              <li class="has-menu-children">
+                <a href="#">
+                  <img src="@img/admin/menu/icon-4.png" alt="icon">
+                  Вывоз и утилизация снега
+                </a>
+              </li>
+              <li class="has-menu-children">
+                <a href="#">
+                  <img src="@img/admin/menu/icon-5.png" alt="icon">
+                  Другие направления
+                </a>
+                <div class="submenuW">
+                  <ul class="submenu">
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                    <li><a href="#">Название услуги</a></li>
+                  </ul>
+                  <ul class="submenu">
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                    <li class="link"><a href="#">Название услуги</a></li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </li>
           <li>
@@ -88,6 +157,29 @@
             <a href="#">Контакты</a>
           </li>
         </ul>
+        <span class="color--gray d-block d-xl-none">с 8.30 до 17.00, сб-вс выходной</span>
+        <a href="tel:+78432166866" class="headerPhone d-block d-xl-none">+7 (843) 216-68-66</a>
+        <div class="headerContacts d-block d-xl-none">
+          Казань, ул. Амирхана Еники 17,
+          БЦ Лагуна , офис 103
+        </div>
+        <div class="headerSocials socials d-block d-xl-none">
+          <ul class="d-flex gap-3">
+            <li>
+              <a href="#" target="_blank" rel="nofollow">
+                <img src="@img/admin/socials/icon-1.svg" alt="icon">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="nofollow">
+                <img src="@img/admin/socials/icon-2.svg" alt="icon">
+              </a>
+            </li>           
+          </ul>
+        </div>
+        <button class="button button--green-transparent d-xl-none">
+          Оставить заявку
+        </button>
       </div>
       <button class="button button--green-transparent">
         Оставить заявку
@@ -95,3 +187,4 @@
     </div>
   </div>
 </header>
+<div class="overlayMenu"></div>

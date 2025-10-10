@@ -1,0 +1,46 @@
+.steps {
+  background: url('@img/why/why-bg.jpg') no-repeat center center / cover;
+  &--transparent {
+    background: transparent;
+  }
+  .sectHead {
+    display: flex;
+    column-gap: 130px;
+    margin-bottom: 50px;
+  }
+  &Content {
+    border-top: 1px solid #EEF4FB;
+  }
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 40px;
+  }
+  &Item {
+    grid-column: 2 span;
+    width: 100%;
+    padding-top: 10px;
+    &Count {
+      color: #018D48;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 100%; 
+      margin-bottom: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #018D48;
+        position: absolute;
+        top: -17px;
+        left: 0;
+      }
+    }
+    &Descr {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}

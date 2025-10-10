@@ -13,11 +13,26 @@
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     height: auto;
+    @media(max-width: 1199px){
+      column-gap: 30px;
+    }
+    @media(max-width: 767px){
+      padding-bottom: 30px;
+    }
+
 
     &Content {
       grid-column: 6 span;
       padding-top: 100px;
       padding-bottom: 170px;
+      @media(max-width: 1199px){
+        padding-top: 60px;
+        padding-bottom: 120px;
+      }
+      @media(max-width: 767px){
+        grid-column: 12 span;
+        padding-bottom: 0;
+      }
     }
 
     &Descr {
@@ -25,6 +40,12 @@
       line-height: 140%;
       max-width: 720px;
       margin-bottom: 50px;
+      @media(max-width: 1199px){
+        font-size: 16px;
+      }
+      @media(max-width: 767px){
+        margin-bottom: 30px;
+      }
     }
 
     &Img {
@@ -34,6 +55,11 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+      @media(max-width: 767px){
+        position: unset;
+        transform: none;
+        margin-top: 30px;
+      }
 
       img {
         width: 100%;
@@ -42,6 +68,24 @@
         height: 100%;
         min-width: 860px;
         position: relative;
+
+        @media(max-width: 1500px) {
+          min-width: 700px;
+        }
+        @media(max-width: 1400px){
+          min-width: 600px;
+        }
+        @media(max-width: 1199px){
+          min-width: 300px;
+        }
+        @media(max-width: 767px){
+          max-width: 300px;   
+          margin-left: unset;
+        }
+        @media(max-width: 575px){
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
 
       &W {
@@ -50,11 +94,17 @@
         display: flex;
         width: 100%;
         height: 100%;
+        @media(max-width: 767px){
+          grid-column: 12 span;
+        }
       }
     }
 
     &Title {
       margin-bottom: 40px;
+      @media(max-width: 767px){
+        margin-bottom: 20px;
+      }
 
       span {
         color: #018D48;
@@ -77,7 +127,7 @@
       background-color: #D6E7F8;
     }
 
-   
+
     position: relative;
     z-index: 2;
   }
@@ -88,6 +138,11 @@
     display: flex;
     align-items: flex-end;
     column-gap: 50px;
+    @media(max-width: 767px){
+      position: static;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
 
   }
 
@@ -114,4 +169,7 @@
 
 .introArrowW {
   column-gap: 20px;
+  @media(max-width: 767px){
+    display: none;
+  }
 }

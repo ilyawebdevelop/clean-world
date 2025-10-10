@@ -9,6 +9,12 @@
     padding: 70px;
     position: relative;
     z-index: 1;
+    @media(max-width: 991px){
+      padding: 40px;
+    }
+    @media(max-width: 575px){
+      padding: 30px 20px;
+    }
   }
 
   .container {
@@ -55,6 +61,9 @@
       justify-content: center;
       cursor: pointer;
       transition: border-color .2s linear;
+      @media(max-width: 991px){
+        height: 50px;
+      }
       &:hover {
         border-color: #018D48;
       }

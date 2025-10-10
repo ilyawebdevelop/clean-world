@@ -70,12 +70,17 @@ section {
     padding-top: 0;
   }
 }
+
 .fz-14 {
   font-size: 14px;
 }
+
 .fz-18 {
   font-size: 18px;
   line-height: 140%;
+  @media(max-width: 575px){
+    font-size: 16px;
+  }
 }
 
 .formInput {
@@ -90,12 +95,21 @@ section {
   @media(max-width: 1199px) {
     padding-left: 20px;
   }
+  @media(max-width: 991px){
+    font-size: 16px;
+    height: 50px;
+  }
+
   &:focus {
     border-color: #018D48;
   }
+
   &::placeholder {
     color: #909090;
     font-size: 18px;
+    @media(max-width: 991px){
+      font-size: 16px;
+    }
   }
 }
 
@@ -108,15 +122,24 @@ section {
     height: 60px;
     padding-left: 25px;
     padding-right: 50px;
-    -webkit-appearance: none; /* Chrome, Safari, Opera */
-    -moz-appearance: none;    /* Firefox */
-    appearance: none;         /* Стандартное свойство */
+    -webkit-appearance: none;
+    /* Chrome, Safari, Opera */
+    -moz-appearance: none;
+    /* Firefox */
+    appearance: none;
+    /* Стандартное свойство */
     cursor: pointer;
     background: url('@img/icons/arrow-down.svg') no-repeat right 25px center / 10px;
     font-size: 18px;
+    @media(max-width: 991px){
+      height: 50px;
+      font-size: 16px;
+    }
+
     &:focus {
       border-color: #018D48;
     }
+
     &:disabled {
       opacity: .4;
     }
@@ -137,6 +160,10 @@ section {
 
 .color--gray {
   color: #909090;
+}
+
+.color--white {
+  color: #fff;
 }
 
 .sectHead {
@@ -210,6 +237,11 @@ section {
   }
 }
 
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1420px;
+  }
+}
 
 .container-fluid {
   max-width: 100%;
@@ -236,8 +268,25 @@ h1,
 .h1 {
   font-size: 52px;
 
-  @media(max-width: 991px) {
-    font-size: 24px;
+  @media(max-width: 1400px) {
+    font-size: 46px;
+  }
+
+  @media(max-width: 1199px) {
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  &.page-h1 {
+    font-size: 60px;
+
+    @media(max-width: 1400px) {
+      font-size: 46px;
+    }
+
+    @media(max-width: 1199px) {
+      font-size: 32px;
+    }
   }
 }
 
@@ -245,12 +294,17 @@ h2,
 .h2 {
   font-size: 52px;
 
+  @media(max-width: 1400px) {
+    font-size: 42px;
+  }
+
   span {
     color: #018D48;
   }
 
   @media(max-width: 991px) {
-    font-size: 20px;
+    font-size: 28px;
+    line-height: normal;
   }
 }
 
@@ -328,6 +382,11 @@ h3,
   cursor: pointer;
   transition: background-color .2s linear;
 
+  @media(max-width: 575px) {
+    width: 40px;
+    height: 40px;
+  }
+
   &.swiper-button-disabled {
     opacity: .4;
     pointer-events: none;
@@ -359,10 +418,16 @@ h3,
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
+  font-weight: 300;
+  @media(max-width: 991px){
+    height: 45px;
+  }
 }
+
 .agreement {
   input {
     display: none;
+
     &:checked {
       &+label {
         .rect {
@@ -371,26 +436,41 @@ h3,
       }
     }
   }
+
   label {
     display: flex;
     column-gap: 15px;
     font-size: 14px;
+    line-height: 20px;
     color: #909090;
     cursor: pointer;
+
     a {
       text-decoration: underline;
       text-underline-offset: 4px;
+
       &:hover {
         color: #018D48;
       }
     }
+
     .rect {
       width: 22px;
       height: 22px;
       flex-shrink: 0;
       border-radius: 4px;
       border: 1px solid #E9EEF4;
-      background: #FFF;      
+      background: #FFF;
     }
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.d-xl-none {
+  @media(min-width: 1199px) {
+    display: none;
   }
 }

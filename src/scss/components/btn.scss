@@ -12,6 +12,12 @@
   cursor: pointer;
   border-radius: 50px;
   font-size: 18px;
+  @media(max-width: 1400px){
+    font-size: 16px;
+  }
+  @media(max-width: 575px){
+    height: 50px;
+  }
 
   &--lg {
     height: 65px;
@@ -49,6 +55,16 @@
     }
   }
 
+  &--black {
+    background-color: #000;
+    color: #fff;
+
+    &:hover {
+      background-color: #C9E0D4;
+      color: #000;
+    }
+  }
+
   &.w-100 {
     width: 100%;
   }
@@ -78,11 +94,18 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  @media(max-width: 575px){
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .calcFormBtn {
   height: 65px;
   font-weight: 500;
+  @media(max-width: 991px){
+    height: 50px;
+  }
 }
 
 .aboutVideoBtn {
@@ -94,16 +117,61 @@
   align-items: center;
   justify-content: center;
   transition: background .2s linear;
+  @media(max-width: 1500px){
+    width: 120px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &:hover {
     background: rgba(255, 255, 255, 0.50);
   }
 }
+
 .aboutBtn {
   height: 65px;
   padding-left: 35px;
   padding-right: 35px;
+  @media(max-width: 991px){
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+
 .presentFile {
-	color: #000;
-	background-color: #fff;
+  color: #000;
+  background-color: #fff;
+}
+
+.catHeadBtn {
+  color: #018D48;
+  font-size: 18px;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  white-space: nowrap;
+  transition: color .2s linear;
+  &:hover {
+    color: #000;
+  }
+}
+.vacItemBtn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #018D48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  img {
+    transition: transform .2s linear;
+  }
 }

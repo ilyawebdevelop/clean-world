@@ -1,0 +1,31 @@
+.doc {
+  overflow: hidden;
+  .sectHead {
+    display: flex;
+    column-gap: 200px;
+    margin-bottom: 50px;
+  }
+  .navArrow {
+    background-color: #F5F5F5;
+
+    &:hover {
+      background-color: #E2F1EA;
+    }
+  }
+
+  .navArrowW {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    column-gap: 20px;
+  }
+  &Slider {
+    overflow: visible;
+  }
+  &Slide {
+    transition: opacity .2s linear;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

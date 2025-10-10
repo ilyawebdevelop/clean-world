@@ -1,0 +1,52 @@
+.req {
+  .sectHead {
+    display: flex;
+    column-gap: 130px;
+    margin-bottom: 50px;
+  }
+
+  &Content {
+    padding-left: 274px;
+
+    ul {
+      li {
+        font-size: 18px;
+        line-height: 140%;
+        display: flex;
+        column-gap: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 1px solid #F5F5F5;
+
+        span {
+          &:nth-child(1) {
+            width: 50%;
+            flex-shrink: 0;
+            color: #909090;
+          }
+
+          &:nth-child(2) {
+            width: 50%;  
+          }
+        }
+      }
+    }
+  }
+}
+.copyBtnW {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 360px;
+  margin-top: 50px;
+}
+.copyText {
+  display: none;
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+  &.active {
+    display: block;
+  }
+}

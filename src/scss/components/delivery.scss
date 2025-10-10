@@ -1,0 +1,23 @@
+.delivery {
+  .sectHead {
+    display: flex;
+    column-gap: 179px;
+    margin-bottom: 50px;
+  }
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 40px;
+  }
+  &Item {
+    grid-column: 4 span;
+    display: flex;
+    column-gap: 30px;
+    &Icon {
+      height: 40px;
+    }
+    &Descr {
+      font-size: 20px;
+    }
+  }
+}

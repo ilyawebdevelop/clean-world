@@ -1,28 +1,56 @@
 .present {
 	padding-top: 100px;
 	padding-bottom: 100px;
+	@media(max-width: 1400px){
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+	@media(max-width: 991px){
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 	.tag {
 		color: #fff;
 		font-weight: 300;
 	}
 	&W {
 		background-color: #018D48;
-		border-radius: 16px;
-		background: #018D48;
+		border-radius: 16px;	
 	}
 	&Content {
 		padding: 59px;
+		@media(max-width: 1400px){
+			padding: 42px;
+		}
+		@media(max-width: 991px){
+			padding: 32px;
+		}
+		@media(max-width: 350px){
+			padding: 30px 20px;
+		}
 	}
 	&Descr {
 		color: #fff;
 		margin-bottom: 40px;
 		font-size: 26px;
 		line-height: normal;
+		font-weight: 500;
+		@media(max-width: 1400px){
+			font-size: 20px;
+			margin-bottom: 25px;
+		}
+		@media(max-width: 991px){
+			font-size: 16px;
+		}
 	}
 	&Img {
 		border-radius: 0 14px 14px 0;
 		position: relative;
 		right: -2px;
+		@media(max-width: 767px){
+			right: 0;
+		}
 		&W {
 			position: relative;
 			height: 100%;
@@ -33,5 +61,20 @@
 		right: 40px;
 		top: 40px;
 		z-index: 1;
+	}
+	&--gray {
+		.presentW {
+			background-color: #EDF6FF;
+		}
+		.tag {
+			color: #000;
+		}
+		.presentDescr {
+			color: #000;
+		}
+		.presentFile {
+			background-color: #018D48;
+			color: #fff;
+		}
 	}
 }

@@ -6,6 +6,13 @@
   .sectHead {
     display: flex;
     column-gap: 160px;
+    @media(max-width: 991px){
+      column-gap: 50px;
+    }
+    @media(max-width: 575px){
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
   &Slider {
     overflow: visible;

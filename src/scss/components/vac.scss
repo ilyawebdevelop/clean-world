@@ -1,0 +1,166 @@
+.vac {
+  &Form {
+    width: 550px;
+    flex-shrink: 0;
+  }
+
+  &List {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &Wrap {
+    display: flex;
+    column-gap: 50px;
+  }
+
+  &Item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-top: 1px solid #EBEBEB;
+    &:last-child {
+      border-bottom: 1px solid #EBEBEB;
+    }
+
+    &Head {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      justify-content: space-between;
+      cursor: pointer;
+      &.active {
+        .vacItemBtn {
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &Body {
+      padding-top: 20px;
+    }
+
+    h3 {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &Block {
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    margin-bottom: 20px;
+
+    &Title {
+      min-width: 180px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #A4A4A4;
+    }
+
+    ul {
+      li {
+        display: flex;
+        column-gap: 10px;
+
+        &::before {
+          content: '';
+          width: 10px;
+          height: 9px;
+          background: url('@img/icons/check-green.svg') no-repeat center center / contain;
+          position: relative;
+          top: 7px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+  &Form {
+    background-color: #018D48;
+    border-radius: 16px;
+    height: fit-content;
+    padding: 50px;
+    .h2 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .formInput {
+      background-color: #fff;
+    }
+    .selectW {
+      select {
+        background-color: #fff;
+      }
+    }
+    .socials {
+      input {
+        display: none;
+  
+        &:checked {
+          &+label {
+            position: relative;
+            background-color: #C9E0D4;
+  
+            &::before {
+              content: '';
+              border: 2px solid #C9E0D4;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              border-radius: 50px;
+            }
+          }
+        }
+      }
+  
+      label {
+        height: 60px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-radius: 50px;
+        background-color: #fff;
+        border: 1px solid #F0F0F0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border-color .2s linear, background-color .2s linear;
+  
+        &:hover {
+          border-color: #C9E0D4;
+          background-color: #C9E0D4;
+        }
+      }
+    }
+    .agreement {
+      label {
+        color: #fff;
+        a {
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+  
+      .rect {
+        background-color: #fff;
+      }
+  
+      input {
+        &:checked {
+          &+label {
+            .rect {
+              background: #fff url('@img/icons/checked.svg') no-repeat center center / 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.history {
+  border-bottom: 1px solid #EFEFEF;
+  padding-bottom: 0;
+  &Slider {
+    &W {
+      padding-bottom: 10px;
+    }
+  }
+  .sectHead {
+    margin-bottom: 50px;
+  }
+
+  &Slider {
+    padding-right: 100px;
+    overflow: visible;
+  }
+
+  &Slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+    &Img {
+      margin-bottom: 20px;
+      height: 420px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    &Title {
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    &Descr {
+      font-size: 18px;
+      line-height: 140%;
+      color: #909090;
+      margin-bottom: 20px;
+    }
+
+    &Year {
+      color: #018D48;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: normal;
+      margin-top: auto;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #018D48;
+        bottom: -8px;
+        left: 0;
+      }
+    }
+    &Content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
