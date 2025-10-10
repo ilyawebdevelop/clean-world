@@ -3,6 +3,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    @media(max-width: 991px){
+      margin-bottom: 30px;
+    }
     &.active {
       ul {
         max-width: 100%;
@@ -51,6 +54,13 @@
           display: flex;
           font-size: 18px;
           transition: background-color .2s linear;
+          @media(max-width: 991px){
+            font-size: 16px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
           &:hover {
             background-color: #D6E7F8;
           }
@@ -63,9 +73,22 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 40px;
     row-gap: 50px;
+    @media(max-width: 1199px){
+      column-gap: 20px;
+      row-gap: 30px;
+    }
   }
   &Item {
     grid-column: 3 span;
+    @media(max-width: 1199px){
+      grid-column: 4 span;
+    }
+    @media(max-width: 991px){
+      grid-column: 6 span;
+    }
+    @media(max-width: 575px){
+      grid-column: 12 span;
+    }
     &:hover {
       .catItemTitle {
         color: #018d48;
@@ -85,6 +108,12 @@
         height: 325px;
         object-fit: cover;
         border-radius: 16px;
+        @media(max-width: 1500px){
+          height: 280px;
+        }
+        @media(max-width: 1400px){
+          height: 240px;
+        }
       }
     }
     &Title {

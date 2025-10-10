@@ -157,6 +157,9 @@
   text-underline-position: from-font;
   white-space: nowrap;
   transition: color .2s linear;
+  @media(max-width: 991px){
+    font-size: 16px;
+  }
   &:hover {
     color: #000;
   }

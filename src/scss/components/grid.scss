@@ -192,6 +192,11 @@
       margin-bottom: 20px;
     }
   }
+  &.mb-lg-20 {
+    @media(max-width: 991px){
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .mb-40 {
