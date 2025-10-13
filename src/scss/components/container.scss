@@ -1,6 +1,32 @@
 .containerPrice {
   .sectHead {
     margin-bottom: 50px;
+    @media(max-width: 991px){
+      margin-bottom: 30px;
+    }
+    @media(max-width: 575px){
+      margin-bottom: 20px;
+    }
+  }
+  .navArrow {
+    background-color: #F5F5F5;
+
+    &:hover {
+      background-color: #E2F1EA;
+    }
+  }
+
+  .navArrowW {
+    justify-content: center;
+    margin-top: 30px;
+    column-gap: 20px;
+    display: none;
+    @media(max-width: 1400px){
+      display: flex;
+    }
+    @media(max-width: 575px){
+      margin-top: 15px;
+    }
   }
 }
 .containerSlide {
@@ -23,6 +49,9 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 15px;
+    @media(max-width: 575px){
+      font-size: 20px;
+    }
   }
   &Descr {
     color: #909090;

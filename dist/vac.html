@@ -7,9 +7,9 @@
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap&_v=20251013083836" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251013083836">
 
 	<title>Вакансии</title>
 </head>
@@ -74,7 +74,7 @@
             <ul class="sub-menu" id="services-submenu-nav">
               <li class="has-menu-children">
                 <a href="#">
-                  <img src="img/admin/menu/icon-1.png" alt="icon">
+                  <picture><source srcset="img/admin/menu/icon-1.webp" type="image/webp"><img src="img/admin/menu/icon-1.png" alt="icon"></picture>
                   Вывоз и утилизация мусора
                 </a>
                 <div class="submenuW">
@@ -92,13 +92,13 @@
               </li>
               <li class="has-menu-children">
                 <a href="#">
-                  <img src="img/admin/menu/icon-2.png" alt="icon">
+                  <picture><source srcset="img/admin/menu/icon-2.webp" type="image/webp"><img src="img/admin/menu/icon-2.png" alt="icon"></picture>
                   Аренда спецтехники
                 </a>
               </li>
               <li class="has-menu-children">
                 <a href="#">
-                  <img src="img/admin/menu/icon-3.png" alt="icon">
+                  <picture><source srcset="img/admin/menu/icon-3.webp" type="image/webp"><img src="img/admin/menu/icon-3.png" alt="icon"></picture>
                   Доставка инертных материалов
                 </a>
                 <div class="submenuW">
@@ -113,20 +113,20 @@
               </li>
               <li class="has-menu-children">
                 <a href="#">
-                  <img src="img/admin/menu/icon-3.png" alt="icon">
+                  <picture><source srcset="img/admin/menu/icon-3.webp" type="image/webp"><img src="img/admin/menu/icon-3.png" alt="icon"></picture>
                   Благоустройство
                 </a>
               </li>
               <li class="has-menu-children"><a href="#">Экология</a></li>
               <li class="has-menu-children">
                 <a href="#">
-                  <img src="img/admin/menu/icon-4.png" alt="icon">
+                  <picture><source srcset="img/admin/menu/icon-4.webp" type="image/webp"><img src="img/admin/menu/icon-4.png" alt="icon"></picture>
                   Вывоз и утилизация снега
                 </a>
               </li>
               <li class="has-menu-children">
                 <a href="#">
-                  <img src="img/admin/menu/icon-5.png" alt="icon">
+                  <picture><source srcset="img/admin/menu/icon-5.webp" type="image/webp"><img src="img/admin/menu/icon-5.png" alt="icon"></picture>
                   Другие направления
                 </a>
                 <div class="submenuW">
@@ -196,11 +196,11 @@
             </li>           
           </ul>
         </div>
-        <button class="button button--green-transparent d-xl-none">
+        <button class="button button--green-transparent d-xl-none" data-fancybox data-src="#modalOrder">
           Оставить заявку
         </button>
       </div>
-      <button class="button button--green-transparent">
+      <button class="button button--green-transparent" data-fancybox data-src="#modalOrder">
         Оставить заявку
       </button>
     </div>
@@ -281,7 +281,7 @@
 
         <div class="vacItem">
           <div class="vacItemHead">
-            <h3>Название вакансии</h3>
+            <h3>Название вакансии длинное название в несколько строк вот так</h3>
             <button class="vacItemBtn" type="button">
               <img src="img/icons/arrow-down-green.svg" alt="icon">
             </button>
@@ -366,10 +366,10 @@
         <h2 class="h2">
           Откликнуться на вакансию
         </h2>
-        <div class="inputW mb-30">
+        <div class="inputW mb-30 mb-sm-20">
           <input type="text" class="formInput" placeholder="Ваше имя">
         </div>
-        <div class="selectW mb-30">
+        <div class="selectW mb-30 mb-sm-20">
           <select name="vac" id="vac-select">
             <option value="1" disabled selected>Выберите интересующую вакансию</option>
             <option value="2">Кассир</option>
@@ -378,7 +378,7 @@
         <div class="socialsName mb-15 color--white fz-14">
           Выберите удобный вид связи
         </div>
-        <div class="d-grid grid-column-3 mb-15 gap-3 socials">
+        <div class="d-grid grid-column-3 grid-column-sm-2 mb-15 gap-3 socials">
           <div class="col">
             <input id="whats_order" type="radio" name="calcSocials" checked>
             <label for="whats_order">WhatsApp</label>
@@ -392,7 +392,7 @@
             <label for="callb_order">Звонок</label>
           </div>
         </div>
-        <div class="inputW mb-30">
+        <div class="inputW mb-30 mb-sm-20">
           <input type="text" class="formInput" placeholder="Укажите ваш номер телефона">
         </div>
         <div class="agreement mb-15">
@@ -545,42 +545,45 @@
 <!-- order -->
 <div class="modal" id="modalOrder">
 
-  <div class="modalHead">
+  <div class="sectHead">
     <h2 class="h2">Оставьте заявку</h2>
-    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24" tabindex="-1">
-        <path d="M20 20L4 4m16 0L4 20"></path>
-      </svg>
-    </button>
   </div>
 
   <div class="modalContent">
-    <p class="modalDescr">
+    <p class="modalDescr mb-20">
       Оставьте заявку на бесплатную консультацию и наши специалисты ответят на все Ваши вопросы
     </p>
     <div class="modalForm">
-      <div class="inputW">
+      <div class="inputW mb-20">
         <input type="text" class="formInput" placeholder="Как вас зовут?">
       </div>
-      <div class="inputW">
+      <div class="inputW mb-20">
         <input type="tel" class="formInput" placeholder="+7 (___) ___-__-__" inputmode="text">
       </div>
-      <button class="button button--blue formBtn">
-        Отправить заявку
-      </button>
-      <div class="agreement">
-        <p>
-          Нажимая кнопку выше, вы даёте согласие на обработку своих персональных данных.
-        </p>
+      <div class="agreement mb-15">
+        <div class="rect"></div>
+        <div class="agreementW">
+          <input id="orderAgree" type="checkbox" checked>
+          <label for="orderAgree">
+            <div class="rect"></div>
+            <div class="agreementText">
+              Я соглашаюсь с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Политикой
+                конфиденциальности</a>
+            </div>
+          </label>
+        </div>
       </div>
+      <button class="button button--green formBtn">
+        Отправить заявку
+      </button>    
     </div>
   </div>
 </div>
 
 	</div>
 	
-	<script src="js/clipboard.min.js"></script>
-	<script src="js/app.min.js"></script>
+	<script src="js/clipboard.min.js?_v=20251013083836"></script>
+	<script src="js/app.min.js?_v=20251013083836"></script>
 
 
 

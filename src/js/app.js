@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
 import { Fancybox } from "./modules/fancybox.esm.js";
+import "./modules/inputmask.min.js";
 import './components.js';
 
 flsFunctions.isWebp();
@@ -9,6 +10,9 @@ Fancybox.bind("[data-fancybox]", {
 	closeButton: true,
 });
 
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(inputs);
 
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
@@ -182,6 +186,9 @@ var mySwiperContainer = new Swiper(containerSlider, {
 	},
 	breakpoints: {
 		0: {
+			slidesPerView: 1,
+		},
+		576: {
 			slidesPerView: 2,
 		},
 		768: {
@@ -220,6 +227,7 @@ document.querySelectorAll('.portfolioInnerSlider').forEach(n => {
 		fadeEffect: {
 			crossFade: true
 		},
+		allowTouchMove: false,
 		speed: 600,
 		autoplay: true,
 		navigation: {
@@ -264,11 +272,18 @@ var mySwiperTeam = new Swiper(teamSlider, {
 	autoplay: {
 		delay: 3000,
 	},
+	navigation: {
+		prevEl: teamSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
+		nextEl: teamSlider?.closest('.sliderW').querySelector('.navArrowNext'),
+	},
 	breakpoints: {
 		0: {
-			slidesPerView: 2,
+			slidesPerView: 1,
 		},
 		768: {
+			slidesPerView: 2,
+		},
+		992: {
 			slidesPerView: 3,
 		},
 		1400: {
@@ -289,9 +304,17 @@ var mySwiperHistory = new Swiper(historySlider, {
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
+			spaceBetween: 15,
 		},
 		768: {
 			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			spaceBetween: 30,
+		},
+		1200: {
+			spaceBetween: 40,
 		},
 	},
 });
@@ -334,17 +357,15 @@ let overlayMenu = document.querySelector('.overlayMenu');
 let body = document.querySelector('body');
 
 
-headerServicesMenuBtn.addEventListener('click', () => {
+headerServicesMenuBtn.addEventListener('click', (event) => {
+	event.preventDefault();
 	servicesSubmenuNav.classList.toggle('active');
 	overlayMenu.classList.toggle('active');
 
 	if (mediaQuerymin1200.matches) {
 		body.classList.toggle('hidden');
 	}
-
-
 });
-
 
 overlayMenu.addEventListener('click', () => {
 	overlayMenu.classList.remove('active');
@@ -358,7 +379,9 @@ overlayMenu.addEventListener('click', () => {
 	});
 });
 
-$('.sub-menu>.has-menu-children>a').click(function () {
+$('.sub-menu>.has-menu-children>a').click(function (event) {
+	event.preventDefault();
+
 	$(".sub-menu>.has-menu-children>a").each(function (index, element) {
 		// 'index' is the zero-based index of the current element in the collection.
 		// 'element' is the raw DOM element.
@@ -412,7 +435,6 @@ document.addEventListener('click', e => {
 	let its_nav = target == menu || menu.contains(target);
 	let overlay_is_active = mobMenuOverlay.classList.contains('active');
 
-
 	if (!its_nav && overlay_is_active) {
 		toggleMenu();
 		toggleBurger();
@@ -420,3 +442,46 @@ document.addEventListener('click', e => {
 		overlayToggle();
 	}
 });
+
+
+// scroll mobile
+function headerScroll() {
+	const header = document.querySelector(".header");
+	if (header) {
+		const headerNav = document.querySelector(".headerNav");
+		const scrollTarget = window.matchMedia("(max-width: 1199px)").matches
+			? header
+			: headerNav;
+		let lastScrollTop = 0;
+		window.addEventListener("scroll", () => {
+			let scrollTop =
+				window.pageYOffset || document.documentElement.scrollTop;
+			if (scrollTop > scrollTarget.clientHeight && scrollTop > lastScrollTop)
+				scrollTarget.classList.add("_scroll");
+			else scrollTarget.classList.remove("_scroll");
+			lastScrollTop = scrollTop;
+		});
+	}
+}
+headerScroll();
+
+
+// scroll computer
+if (mediaQuerymin1200.matches) {
+	function fixHeader() {
+		if ($(document).scrollTop() > $('.header').offset().top + $('.header').outerHeight()) {
+			$('.headerB').addClass('_fixed');
+			setTimeout(function () {
+				$('.headerB').addClass('_show');
+			}, 50);
+		} else {
+			$('.headerB').removeClass('_fixed _show');
+		}
+	}
+
+	$(window).on('load scroll', function () {
+		if ($('.headerB').length > 0) fixHeader();
+	});
+
+}
+

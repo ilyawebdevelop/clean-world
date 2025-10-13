@@ -105,6 +105,11 @@
       gap: 20px;
     }
   }
+  &.gap-lg-2 {
+    @media(max-width: 991px){
+      gap: 20px;
+    }
+  }
 }
 
 .gap-70 {

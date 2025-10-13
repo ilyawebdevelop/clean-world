@@ -7,19 +7,42 @@
     display: flex;
     column-gap: 130px;
     margin-bottom: 50px;
+    @media(max-width: 991px){
+      column-gap: 50px;
+      margin-bottom: 30px;
+    }
+    @media(max-width: 575px){
+      column-gap: 0;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: 0;
+    }
   }
   &Content {
     border-top: 1px solid #EEF4FB;
+    @media(max-width: 991px){
+      border-top: none;
+    }
   }
   &Grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     column-gap: 40px;
+    @media(max-width: 575px){
+      column-gap: 0;
+    }
   }
   &Item {
     grid-column: 2 span;
     width: 100%;
     padding-top: 10px;
+    @media(max-width: 991px){
+      grid-column: 12 span;
+      margin-bottom: 15px;
+      display: flex;
+      column-gap: 15px;
+      align-items: flex-end;
+    }
     &Count {
       color: #018D48;
       font-size: 60px;
@@ -27,6 +50,10 @@
       line-height: 100%; 
       margin-bottom: 20px;
       position: relative;
+      @media(max-width: 991px){
+        margin-bottom: 0;
+      }
+
       &::before {
         content: '';
         width: 15px;
@@ -36,11 +63,25 @@
         position: absolute;
         top: -17px;
         left: 0;
+        @media(max-width: 991px){
+          display: none;
+        }
       }
     }
     &Descr {
       font-size: 20px;
       font-weight: 500;
+      @media(max-width: 1400px){
+        font-size: 18px;
+      }
+      @media(max-width: 991px){
+        height: fit-content;
+        font-size: 16px;
+      }
+      @media(max-width: 767px){
+        position: relative;
+        bottom: 4px;
+      }
     }
   }
 }

@@ -83,6 +83,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media(max-width: 575px){
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .servicesSlideArrow {
@@ -157,6 +161,26 @@
   text-underline-position: from-font;
   white-space: nowrap;
   transition: color .2s linear;
+  position: relative;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    right: calc(100% - 10px);
+    top: -20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 30%);
+    width: 115px;
+    height: 61px;
+    z-index: 0;
+    @media(max-width: 991px){
+      height: 50px;
+      right: calc(100% - 53px);
+      top: -21px;
+    }
+  }
   @media(max-width: 991px){
     font-size: 16px;
   }
@@ -176,5 +200,10 @@
  
   img {
     transition: transform .2s linear;
+  }
+}
+.reqBtn {
+  @media(max-width: 575px){
+    max-width: 200px;
   }
 }

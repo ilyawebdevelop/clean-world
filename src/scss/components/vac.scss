@@ -1,23 +1,33 @@
 .vac {
-  &Form {
-    width: 550px;
-    flex-shrink: 0;
-  }
 
   &List {
     width: 100%;
     margin-top: 20px;
+    @media(max-width: 991px){
+      margin-top: 0;
+    }
   }
 
   &Wrap {
     display: flex;
     column-gap: 50px;
+    @media(max-width: 1199px){
+      flex-direction: column;
+    }
   }
 
   &Item {
     padding-top: 32px;
     padding-bottom: 32px;
     border-top: 1px solid #EBEBEB;
+    @media(max-width: 1400px){
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    @media(max-width: 991px){
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
     &:last-child {
       border-bottom: 1px solid #EBEBEB;
     }
@@ -45,6 +55,12 @@
       font-size: 26px;
       font-weight: 500;
       line-height: normal;
+      @media(max-width: 1400px){
+        font-size: 23px;
+      }
+      @media(max-width: 991px){
+        font-size: 18px;
+      }
     }
   }
 
@@ -53,6 +69,10 @@
     line-height: 140%;
     display: flex;
     margin-bottom: 20px;
+    @media(max-width: 575px){
+      flex-direction: column;
+      row-gap: 15px;
+    }
 
     &Title {
       min-width: 180px;
@@ -83,10 +103,23 @@
     border-radius: 16px;
     height: fit-content;
     padding: 50px;
+    width: 550px;
+    flex-shrink: 0;
+    @media(max-width: 1199px){
+      margin-top: 30px;
+      width: 100%;
+    }
+    @media(max-width: 991px){
+      padding: 30px 20px;
+    }
     .h2 {
       font-size: 36px;
       color: #fff;
       margin-bottom: 30px;
+      @media(max-width: 991px){
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
     }
     .formInput {
       background-color: #fff;
@@ -131,6 +164,9 @@
         justify-content: center;
         cursor: pointer;
         transition: border-color .2s linear, background-color .2s linear;
+        @media(max-width: 991px){
+          height: 50px;
+        }
   
         &:hover {
           border-color: #C9E0D4;

@@ -3,21 +3,54 @@
     display: flex;
     column-gap: 179px;
     margin-bottom: 50px;
+    @media(max-width: 991px){
+      column-gap: 50px;
+      margin-bottom: 30px;
+    }
+    @media(max-width: 575px){
+      margin-bottom: 20px;
+      column-gap: 0;
+      row-gap: 20px;
+      flex-direction: column;
+    }
   }
   &Grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 40px;
+    @media(max-width: 991px){
+      row-gap: 30px;
+    }
+    @media(max-width: 575px){
+      column-gap: 15px;
+    }
   }
   &Item {
     grid-column: 4 span;
     display: flex;
     column-gap: 30px;
+    @media(max-width: 1400px){
+      column-gap: 20px;
+    }
+    @media(max-width: 991px){
+      grid-column: 6 span;
+    }
+    @media(max-width: 575px){
+      grid-column: 12 span;
+    }
     &Icon {
       height: 40px;
+      flex-shrink: 0;
+      @media(max-width: 991px){
+        width: 40px;
+      }
     }
     &Descr {
       font-size: 20px;
+      @media(max-width: 991px){
+        font-size: 16px;
+        line-height: normal;
+      }
     }
   }
 }

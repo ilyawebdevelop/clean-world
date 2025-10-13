@@ -4,6 +4,16 @@
     display: flex;
     column-gap: 200px;
     margin-bottom: 50px;
+    @media(max-width: 991px){
+      column-gap: 50px;
+      margin-bottom: 30px;
+    }
+    @media(max-width: 575px){
+      margin-bottom: 20px;
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 20px;
+    }
   }
   .navArrow {
     background-color: #F5F5F5;

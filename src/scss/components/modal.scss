@@ -1,11 +1,6 @@
 // modal
 .modal {
   display: none;
-  &-header {
-    padding: 45px;
-    padding-bottom: 25px;
-    border-bottom: none;
-  }
 
   &-body {
     padding: 45px;
@@ -18,6 +13,12 @@
   .btn-close {
     background: none;
     opacity: 1;
+  }
+  .h2 {
+    font-size: 35px;
+    @media(max-width: 991px){
+      font-size: 27px;
+    }
   }
 }
 

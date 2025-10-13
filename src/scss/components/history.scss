@@ -2,17 +2,23 @@
   border-bottom: 1px solid #EFEFEF;
   padding-bottom: 0;
   &Slider {
+    padding-right: 100px;
+    overflow: visible;
+    @media(max-width: 767px){
+      padding-right: 30px;
+    }
     &W {
       padding-bottom: 10px;
     }
   }
   .sectHead {
     margin-bottom: 50px;
-  }
-
-  &Slider {
-    padding-right: 100px;
-    overflow: visible;
+    @media(max-width: 991px){
+      margin-bottom: 30px;
+    }
+    @media(max-width: 575px){
+      margin-bottom: 20px;
+    }
   }
 
   &Slide {
@@ -26,12 +32,25 @@
       width: 100%;
       object-fit: cover;
       border-radius: 16px;
+      @media(max-width: 1500px){
+        height: 380px;
+      }
+      @media(max-width: 575px){
+        height: 65vw;
+      }
     }
 
     &Title {
       font-size: 26px;
       font-weight: 500;
       margin-bottom: 20px;
+      @media(max-width: 1400px){
+        font-size: 23px;
+      }
+      @media(max-width: 991px){
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
     }
 
     &Descr {
@@ -39,6 +58,9 @@
       line-height: 140%;
       color: #909090;
       margin-bottom: 20px;
+      @media(max-width: 575px){
+        font-size: 16px;
+      }
     }
 
     &Year {
@@ -47,6 +69,9 @@
       font-weight: 700;
       line-height: normal;
       margin-top: auto;
+      @media(max-width: 575px){
+        font-size: 35px;
+      }
       &::after {
         content: '';
         position: absolute;
@@ -56,6 +81,11 @@
         background-color: #018D48;
         bottom: -8px;
         left: 0;
+        @media(max-width: 575px){
+          width: 12px;
+          height: 12px;
+          bottom: -6px;
+        }
       }
     }
     &Content {
